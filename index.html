@@ -1,4 +1,4 @@
-<!doctype html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c1220"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Finansım V2.3</title><link rel="manifest" href="manifest.webmanifest"><style>
+<!doctype html><html lang="tr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c1220"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Finansım V2.4</title><link rel="manifest" href="manifest.webmanifest"><style>
 :root{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#f2f5ff;background:#0c1220}*{box-sizing:border-box}body{margin:0;background:linear-gradient(150deg,#101a2e,#090e19);min-height:100dvh}button,input,select{font:inherit}button{cursor:pointer}header{padding:calc(22px + env(safe-area-inset-top)) 22px 10px;display:flex;justify-content:space-between;align-items:center}header h1{font-size:27px;margin:0;font-weight:800}header small{color:#9aa7c1}.icon{background:#1b2840;border:1px solid #2b3b58;color:#dce7ff;border-radius:12px;padding:10px}.pages{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;height:calc(100dvh - 166px - env(safe-area-inset-top));}.pages::-webkit-scrollbar{display:none}.page{min-width:100%;overflow-y:auto;scroll-snap-align:start;padding:10px 20px 30px}.label{font-size:12px;letter-spacing:1.2px;color:#93a3c1;font-weight:750;margin:15px 0 10px}.card{background:linear-gradient(135deg,#1a2942,#152138);border:1px solid #293c59;border-radius:20px;padding:22px;margin-bottom:14px;box-shadow:0 12px 28px #050a1533}.card .name{font-size:13px;color:#afbdd6;font-weight:650}.amount{font-size:clamp(28px,8vw,38px);font-weight:800;margin:13px 0 5px;letter-spacing:-1px}.green{color:#42dbad}.red{color:#ff718a}.gold{color:#f5c968}.muted{color:#95a4be;font-size:13px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.smallcard{background:#17253c;border:1px solid #293b55;border-radius:16px;padding:17px;margin:10px 0}.smallcard strong{font-size:18px}.badge{background:#273b58;color:#b7cdf3;padding:5px 9px;border-radius:8px;font-size:11px}.add{width:100%;border:1px dashed #4a6387;background:#16243b;color:#b9d6ff;border-radius:15px;padding:15px;margin:8px 0 18px}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px}.primary{border:0;border-radius:14px;padding:15px;color:white;background:#226b5a;font-weight:750}.primary.out{background:#8a354c}.primary.blue{background:#34558b}.primary.goldbtn{background:#8a692e}.wide{grid-column:1/-1}.transaction{padding:15px 2px;border-bottom:1px solid #263550}.transaction .sub{color:#9caac1;font-size:12px;margin-top:5px}.nav{position:fixed;bottom:0;width:100%;height:calc(74px + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:#101b2e;border-top:1px solid #293953;display:flex;justify-content:space-around;align-items:center}.nav button{background:none;border:0;color:#8fa1bd;display:flex;flex-direction:column;align-items:center;gap:5px;font-size:11px}.nav button.active{color:#65c8f9}.nav span{font-size:22px}.overlay{position:fixed;inset:0;background:#000a;display:none;align-items:flex-end;z-index:5}.overlay.show{display:flex}.sheet{background:#15233a;border-radius:24px 24px 0 0;width:100%;max-height:90dvh;overflow-y:auto;padding:24px 20px calc(24px + env(safe-area-inset-bottom));box-shadow:0 -10px 45px #0006}.sheet h2{margin:0 0 20px}label{display:block;color:#b6c5dc;font-size:13px;margin:13px 0 7px}input,select{width:100%;background:#0c172a;border:1px solid #354862;border-radius:12px;padding:13px;color:#f5f8ff;outline:none}input:focus,select:focus{border-color:#71b5ed}.sheet .row{margin-top:20px}.sheet button{border:0;border-radius:12px;padding:13px 18px;background:#2d4567;color:#fff}.sheet button.save{background:#257b64;flex:1}.hint{color:#94a5c1;font-size:12px;line-height:1.5}.link{background:none;border:0;color:#8ac7ff;padding:5px}.notice{font-size:12px;color:#a9b9d2;line-height:1.6}.pill{border-radius:10px;background:#203653;padding:8px 12px;color:#d8e9ff;border:0}#toast{position:fixed;bottom:92px;left:10%;width:80%;background:#304665;color:white;text-align:center;border-radius:12px;padding:12px;display:none;z-index:9}@media(min-width:650px){body{max-width:460px;margin:auto;border-left:1px solid #253753;border-right:1px solid #253753}.nav{max-width:460px}.overlay{justify-content:center;align-items:center}.sheet{max-width:460px;border-radius:24px;max-height:85dvh}}
 </style></head><body><header><div><small>KİŞİSEL FİNANS TAKİBİ</small><h1 id="heading">Finansım <span style="font-size:11px;color:#93a3c1">V2.2</span></h1><small id="cloudBadge">🔐 Giriş gerekli</small></div><button class="icon" onclick="openSettings()">⚙</button></header><main class="pages" id="pages"><section class="page" id="dashboard"></section><section class="page" id="accounts"></section><section class="page" id="movements"></section></main><nav class="nav"><button class="active" onclick="go(0)"><span>⌂</span>Özet</button><button onclick="go(1)"><span>▤</span>Hesaplar</button><button onclick="go(2)"><span>⇄</span>Hareketler</button></nav><div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()"><div class="sheet"><h2 id="modalTitle"></h2><div id="modalBody"></div></div></div><div id="toast"></div><script>
 const KEY='finansim_v1';const empty=()=>({accounts:[],transactions:[],savings:[],prices:{gold:null,USD:null,EUR:null,GBP:null,updated:null},salary:0,claims:[]});let db;try{db=JSON.parse(localStorage.getItem(KEY))||empty()}catch{db=empty()}db={...empty(),...db};if(!Array.isArray(db.claims))db.claims=[];const uid=()=>crypto.randomUUID?.()||String(Date.now()+Math.random());const fmt=n=>new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2}).format(n||0);const num=x=>Number(String(x||'0').replace(',','.'))||0;const date=()=>{let d=new Date();return [d.getFullYear(),String(d.getMonth()+1).padStart(2,'0'),String(d.getDate()).padStart(2,'0')].join('-')};const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));const save=()=>{if(!sessionUser){localStorage.setItem(KEY,JSON.stringify(db))}else{scheduleCloudSave()}render()};const toast=s=>{let e=document.querySelector('#toast');e.textContent=s;e.style.display='block';setTimeout(()=>e.style.display='none',2600)};const account=id=>db.accounts.find(a=>a.id===id);const active=type=>db.accounts.filter(a=>!a.archived&&(!type||a.type===type));const opts=(arr)=>arr.map(a=>`<option value="${esc(a.id)}">${a.type==='credit'?'💳 Kredi Kartı':a.type==='cash'?'💵 Nakit':'🏦 Banka'} — ${esc(a.name)}</option>`).join('');const moneyField=(id,label='Tutar (TL)')=>`<label>${label}</label><input id="${id}" type="number" step="0.01" min="0" inputmode="decimal" required>`;const textField=(id,label,placeholder='')=>`<label>${label}</label><input id="${id}" placeholder="${placeholder}">`;const selectField=(id,label,options)=>`<label>${label}</label><select id="${id}">${options}</select>`;const foot=(fn)=>`<div class="row"><button onclick="closeModal()">Vazgeç</button><button class="save" onclick="${fn}">Kaydet</button></div>`;const val=id=>document.getElementById(id)?.value;function modal(title,body){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=body;document.getElementById('overlay').classList.add('show')}function closeModal(){document.getElementById('overlay').classList.remove('show')}function requireAmount(id){let n=num(val(id));if(n<=0){toast('Geçerli bir tutar gir');throw Error('amount')}return n}
@@ -28,49 +28,52 @@ function openSavingsMove(action){let kinds='<option value="gold">Gram altın</op
 function saveSavingsMove(action){let n;try{n=requireAmount('tamount')}catch{return}let qty=num(val('qty')),kind=val('kind'),a=account(val('taccount'));if(!a||qty<=0)return toast('Miktar ve hesap seç');let s=db.savings.find(x=>x.kind===kind);if(!s){s={kind,qty:0};db.savings.push(s)}if(action==='sell'&&s.qty+1e-8<qty)return toast('Yetersiz birikim');s.qty=Math.round((s.qty+(action==='buy'?qty:-qty))*10000)/10000;if(a.type==='credit')a.used+=n;else a.balance+=action==='buy'?-n:n;addTx({kind:'savings',title:(action==='buy'?'Birikim alımı: ':'Birikim satımı: ')+(kind==='gold'?'Gram altın':kind),signed:action==='buy'?-n:n,detail:`${qty} ${kind==='gold'?'gram':kind} · ${a.name}`,accountId:a.id,asset:kind,qty,amount:n,action,installments:action==='buy'?num(val('install')):1});save();openSavings();toast('Birikim işlemi kaydedildi')}
 function openPrices(){modal('Birikim Fiyatları',`<p class="hint">Piyasa gram altın <b>ALIŞ</b> fiyatını gir. Dövizde alış fiyatını biliyorsan elle girebilirsin. Otomatik döviz kurları yalnızca günlük referans kurlardır.</p>${moneyField('gold','Gram Altın ALIŞ (TL)')}${moneyField('USD','USD (TL)')}${moneyField('EUR','EUR (TL)')}${moneyField('GBP','GBP (TL)')}${foot('savePrices()')}`);for(let k of ['gold','USD','EUR','GBP'])document.getElementById(k).value=db.prices[k]??''}
 function savePrices(){for(let k of ['gold','USD','EUR','GBP']){let raw=val(k);if(String(raw).trim()!=='')db.prices[k]=num(raw)}db.prices.updated=new Date().toISOString();save();openSavings();toast('Fiyatlar kaydedildi')}
-// Gram altın fiyatı: kaynak tarihi doğrulanır, eski veri otomatik uygulanmaz.
+// Gram altın: bağımsız kaynaklar sırayla denenir; eski veri asla güncel diye kaydedilmez.
 let goldCheckStarted=false, goldRequestBusy=false;
+async function goldFetch(url){
+ const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
+ try{const r=await fetch(url,{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error('HTTP '+r.status);return await r.json()}finally{clearTimeout(timer)}
+}
+function goldValidate(price,rawDate,source,stale){
+ price=Number(price);
+ if(!Number.isFinite(price)||price<100||price>1000000)throw Error(source+': alış fiyatı geçersiz');
+ if(!rawDate)throw Error(source+': fiyat tarihi yok');
+ const stamp=new Date(rawDate),age=Date.now()-stamp.getTime();
+ if(!Number.isFinite(age))throw Error(source+': tarih okunamadı');
+ if(age < -10*60000)throw Error(source+': kaynak tarihi gelecekte');
+ if(stale || age>90*60000)throw Error(source+': eski veri ('+stamp.toLocaleString('tr-TR')+')');
+ return {price,stamp,source};
+}
 async function refreshGold(silent=false){
- if(goldRequestBusy)return;
- goldRequestBusy=true;
+ if(goldRequestBusy)return;goldRequestBusy=true;
+ const failures=[];let quote=null;
  try{
-  const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),12000);
-  let response;
-  try{response=await fetch('https://cdn.jsdelivr.net/gh/MehmetAkgul/currency-api-tr@main/v1/currencies/try-full.json',{cache:'no-store',signal:controller.signal})}finally{clearTimeout(timer)}
-  if(!response.ok)throw Error('Kaynak HTTP '+response.status);
-  const json=await response.json();
-  const item=json?.try?.xau_gram;
-  const price=Number(item?.bid);
-  if(!Number.isFinite(price)||price<100||price>1000000)throw Error('Gram altın ALIŞ alanı bulunamadı veya geçersiz');
-  const rawDate=item?.updated_at||json?.updated_at||item?.date||json?.date;
-  if(!rawDate)throw Error('Kaynak fiyat tarihi göndermiyor');
-  const stamp=new Date(rawDate);
-  if(!Number.isFinite(stamp.getTime()))throw Error('Kaynak tarihi okunamadı: '+String(rawDate).slice(0,50));
-  const age=Date.now()-stamp.getTime();
-  const checkedAt=new Date().toISOString();
-  const ageText=Math.round(age/60000)+' dakika';
-  db.prices.goldCheckedAt=checkedAt;
-  db.prices.goldQuoteAt=stamp.toISOString();
-  db.prices.goldSource='currency-api-tr / xau_gram.bid';
-  if(age < -10*60*1000)throw Error('Kaynak tarihi gelecekte: '+stamp.toLocaleString('tr-TR'));
-  if(age > 60*60*1000 || json.is_stale===true){
-   db.prices.goldStatus='Kaynak verisi eski ('+stamp.toLocaleString('tr-TR')+', '+ageText+'). Güncel fiyat değiştirilmedi.';
-   console.warn('Gram altın eski veri:',{alis:price,kaynakTarihi:rawDate,dakikaOnce:Math.round(age/60000),is_stale:json.is_stale});
-   if(!silent)toast('Kaynak eski fiyat gönderiyor; mevcut fiyat korundu.');
+  try{
+   const j=await goldFetch('https://altingrafigi.com/api/v1/prices');
+   const rows=Array.isArray(j.data)?j.data:[];
+   const row=rows.find(x=>String(x.category||'').toLocaleUpperCase('tr-TR')==='GRAM ALTIN' && /gram/i.test(String(x.name||'')))
+      ||rows.find(x=>/gram altın/i.test(String(x.name||'')));
+   if(!row)throw Error('Gram altın satırı bulunamadı');
+   quote=goldValidate(row.bid,row.timestamp||j.updatedAt,'Altın Grafiği / '+(row.name||row.symbol),false);
+  }catch(e){failures.push(String(e.message||e))}
+  if(!quote){
+   try{
+    const j=await goldFetch('https://cdn.jsdelivr.net/gh/MehmetAkgul/currency-api-tr@main/v1/currencies/try-full.json');
+    quote=goldValidate(j?.try?.xau_gram?.bid,j?.try?.xau_gram?.updated_at||j?.updated_at,'currency-api-tr',j?.is_stale===true);
+   }catch(e){failures.push(String(e.message||e))}
+  }
+  db.prices.goldCheckedAt=new Date().toISOString();
+  if(quote){
+   db.prices.gold=quote.price;db.prices.goldQuoteAt=quote.stamp.toISOString();db.prices.goldSource=quote.source;
+   db.prices.goldStatus='ALIŞ fiyatı güncellendi ('+quote.source+'): '+quote.stamp.toLocaleString('tr-TR');
+   db.prices.updated=db.prices.goldCheckedAt;save();
+   if(!silent)toast('Gram altın ALIŞ: '+fmt(quote.price));
   }else{
-   db.prices.gold=price;
-   db.prices.goldStatus='ALIŞ fiyatı güncellendi: '+stamp.toLocaleString('tr-TR')+' ('+ageText+' önce)';
-   db.prices.updated=checkedAt;
-   save();
-   if(!silent)toast('Gram altın ALIŞ güncellendi: '+fmt(price));
+   db.prices.goldStatus='Güncel fiyat alınamadı. '+failures.join(' | ')+'. Son fiyat korundu.';
+   console.warn('Altın kaynakları başarısız:',failures);
+   if(!silent)toast('Altın kaynakları güncel fiyat göndermedi.');
   }
   if(document.getElementById('overlay').classList.contains('show')&&document.getElementById('modalTitle').textContent==='Net Birikimlerim')openSavings();
- }catch(error){
-  console.warn('Gram altın fiyatı erişim hatası:',error);
-  db.prices.goldCheckedAt=new Date().toISOString();
-  db.prices.goldStatus='Fiyat alınamadı ('+String(error.message||'bağlantı hatası')+'). Son kayıtlı fiyat korundu.';
-  if(document.getElementById('overlay').classList.contains('show')&&document.getElementById('modalTitle').textContent==='Net Birikimlerim')openSavings();
-  if(!silent)toast('Gram altın alınamadı; mevcut fiyat korundu.');
  }finally{goldRequestBusy=false}
 }
 async function refreshFx(silent=false){try{let res=await fetch('https://api.frankfurter.dev/v2/rates?base=TRY&quotes=USD,EUR,GBP',{cache:'no-store'});if(!res.ok)throw Error('HTTP '+res.status);let data=await res.json(),rows=Array.isArray(data)?data:(Array.isArray(data.rates)?data.rates:[]);let found={};for(let row of rows){let k=row.quote||row.currency||row.symbol;if(['USD','EUR','GBP'].includes(k)&&Number(row.rate)>0)found[k]=1/Number(row.rate)}if(Object.keys(found).length!==3)throw Error('Eksik kur');Object.assign(db.prices,found);db.prices.updated=new Date().toISOString();db.prices.fxSource='Frankfurter günlük referans';save();if(document.getElementById('overlay').classList.contains('show')&&document.getElementById('modalTitle').textContent==='Net Birikimlerim')openSavings();if(!silent)toast('Döviz referans kurları güncellendi')}catch(e){if(!silent)toast('Kur alınamadı; fiyatları elle girebilirsin')}}
