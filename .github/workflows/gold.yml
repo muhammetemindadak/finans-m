@@ -14,6 +14,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Fetch and validate gram gold buying price
+        env:
+          HESAPLI_ALTIN_API_KEY: ${{ secrets.HESAPLI_ALTIN_API_KEY }}
         run: python update_gold.py
       - name: Commit new price if changed
         run: |
