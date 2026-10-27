@@ -1,0 +1,13 @@
+Finansim V2.6 - gram altin alis fiyati
+
+1. ZIP icerigini GitHub deponuzun ana dizinine, klasor yapisini koruyarak yukleyin.
+2. https://hesaplialtin.com/altin-fiyati-api/anahtar adresinden ucretsiz API anahtari alin.
+3. GitHub repo Settings > Secrets and variables > Actions > New repository secret
+   Name: HESAPLI_ALTIN_API_KEY
+   Secret: aldiginiz API anahtari
+4. Actions > Finansim Gram Altin > Run workflow.
+5. Basariliysa repo kokunde gold.json olusur. Ardindan Finansim V2.6 icinde altin guncelleyin.
+
+Anahtari index.html dosyasina veya repoya YAZMAYIN.
+Kaynak: https://hesaplialtin.com/altin-fiyati-api
+Fiyat bulunamazsa Actions kirmizi hata verir, onceki gold.json korunur.
